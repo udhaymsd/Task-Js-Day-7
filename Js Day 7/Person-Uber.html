@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Person class
+class Person {
+  constructor(name, age, location) {
+    this.name = name;
+    this.age = age;
+    this.location = location;
+  }
+
+  // Method to display person's details
+  displayDetails() {
+    console.log(`Name: ${this.name}`);
+    console.log(`Age: ${this.age}`);
+    console.log(`Location: ${this.location}`);
+  }
+}
+
+// UberCalculator class
+class UberCalculator {
+  constructor(distance, duration) {
+    this.distance = distance;
+    this.duration = duration;
+  }
+
+  // Method to calculate the Uber price
+  calculatePrice() {
+    // Your price calculation logic goes here
+    // Example: calculate based on distance and duration
+    let baseFare = 2.5;
+    let distanceRate = 1.5;
+    let durationRate = 0.2;
+    let price = baseFare + (this.distance * distanceRate) + (this.duration * durationRate);
+    return price;
+  }
+}
+
+// Usage example
+const person = new Person("John Doe", 30, "New York");
+person.displayDetails();
+
+const uberCalculator = new UberCalculator(10, 20); // Assuming 10 km distance and 20 minutes duration
+const price = uberCalculator.calculatePrice();
+console.log(`Uber Price: $${price}`);
+
+    </script>
+</body>
+</html>

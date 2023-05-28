@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Movie {
+  constructor(title, studio, rating = "PG") {
+    this.title = title;
+    this.studio = studio;
+    this.rating = rating;
+  }
+  
+  static getPG(movies) {
+    return movies.filter(movie => movie.rating === "PG");
+  }
+}
+
+// Creating an instance of the Movie class
+const casinoRoyale = new Movie("Casino Royale", "Eon Productions", "PG-13");
+
+// Example usage of the getPG method
+const movies = [
+  new Movie("Movie 1", "Studio 1", "PG"),
+  new Movie("Movie 2", "Studio 2", "PG-13"),
+  new Movie("Movie 3", "Studio 3", "R"),
+  new Movie("Movie 4", "Studio 4", "PG")
+];
+
+const pgMovies = Movie.getPG(movies);
+console.log(pgMovies);
+
+    </script>
+</body>
+</html>
